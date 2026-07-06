@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nikben — Soleil — F.SONNY PRODUCTIONS</title>
+  <meta name="description" content="Nikben — Soleil, an AI-first e-commerce fashion campaign by F.SONNY PRODUCTIONS." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="project-page">
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <a href="index.html#showcase" class="nav__link">Work</a>
+    <a href="index.html#about" class="nav__link nav__link--center">About</a>
+    <a href="connect.html" class="nav__cta">Work with me</a>
+  </header>
+
+  <main>
+
+    <article class="project">
+
+      <!-- ============ HEAD ============ -->
+      <div class="project__head">
+        <h1 class="project__title">Nikben — Soleil</h1>
+        <span class="project__client">Nikben <span class="project__spec">Speculative</span></span>
+        <div class="project__body">
+          <p>A speculative e-commerce fashion campaign for Nikben California — built around the Soleil tee. We set the story in a sun-washed, collage-covered bedroom: a young creator pinning inspiration to the walls, living inside the world the garment comes from rather than just modelling it.</p>
+          <p>Made entirely with AI, the shoot pairs a cast, a location and the product into one consistent film — hero product moments, lifestyle detail and brand close-ups — the kind of full campaign that would normally need a crew, a set and a shoot day, delivered at a fraction of the time and cost.</p>
+        </div>
+        <p class="project__meta">E-commerce Fashion&ensp;•&ensp;2026</p>
+        <a class="project__cta" href="#player">Watch Full Film</a>
+      </div>
+
+      <!-- ============ PLAYER ============ -->
+      <div class="project__player" id="player">
+        <div class="project__video">
+          <video src="media/showcase-05.mp4" autoplay muted loop playsinline></video>
+        </div>
+      </div>
+
+      <!-- ============ CREDITS ============ -->
+      <section class="credits">
+        <h2 class="credits__heading reveal">Credits</h2>
+        <div class="credit reveal">
+          <span class="credit__role">Client</span>
+          <span class="credit__names">Nikben (Speculative)</span>
+        </div>
+        <div class="credit reveal">
+          <span class="credit__role">Direction &amp; Creative</span>
+          <span class="credit__names">F.Sonny Productions</span>
+        </div>
+        <div class="credit reveal">
+          <span class="credit__role">AI Generation</span>
+          <span class="credit__names">F.Sonny Productions</span>
+        </div>
+        <div class="credit reveal">
+          <span class="credit__role">Edit &amp; Post-Production</span>
+          <span class="credit__names">F.Sonny Productions</span>
+        </div>
+        <div class="credit reveal">
+          <span class="credit__role">Casting &amp; Styling</span>
+          <span class="credit__names">AI — art directed in-house</span>
+        </div>
+      </section>
+
+      <!-- ============ GALLERY ============ -->
+      <section class="pgallery">
+        <div class="pgallery__row">
+          <div class="pgallery__item pgallery__item--p reveal-img" data-parallax="0.05">
+            <img src="media/nikben/06.jpg" alt="Casting sheet for the campaign lead" />
+          </div>
+          <div class="pgallery__item pgallery__item--p pgallery__item--up reveal-img" data-parallax="-0.06">
+            <img src="media/nikben/07.jpg" alt="Location stills — the collage-covered bedroom set" />
+          </div>
+          <div class="pgallery__item pgallery__item--p reveal-img" data-parallax="0.08">
+            <img src="media/nikben/08.jpg" alt="The Nikben Soleil tee — back print product shot" />
+          </div>
+        </div>
+        <div class="pgallery__row pgallery__row--feature">
+          <div class="pgallery__item pgallery__item--p reveal-img" data-parallax="0.05">
+            <img src="media/nikben/01.jpg" alt="The creator in a sun-lit, collage-covered bedroom" />
+          </div>
+          <div class="pgallery__item pgallery__item--p pgallery__item--up reveal-img" data-parallax="-0.06">
+            <img src="media/nikben/02.jpg" alt="Hero shot — the Nikben Soleil tee back print" />
+          </div>
+          <div class="pgallery__item pgallery__item--p reveal-img" data-parallax="0.08">
+            <img src="media/nikben/03.jpg" alt="Pinning inspiration photos to the wall, wearing the tee" />
+          </div>
+        </div>
+        <div class="pgallery__row pgallery__row--feature">
+          <div class="pgallery__item pgallery__item--p reveal-img" data-parallax="0.06">
+            <img src="media/nikben/04.jpg" alt="Close-up of the Original Nikben chest embroidery" />
+          </div>
+          <div class="pgallery__item pgallery__item--p pgallery__item--up reveal-img" data-parallax="-0.06">
+            <img src="media/nikben/05.jpg" alt="Lifestyle detail — seated on the floor with polaroids" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ NEXT PROJECT ============ -->
+      <section class="next">
+        <p class="next__kicker reveal">Next project</p>
+        <a class="next__link" href="project-01.html">L:A Bruket — Summer</a>
+      </section>
+
+    </article>
+
+  </main>
+
+  <footer class="pfooter">
+    <a href="mailto:f.sonnyijeh@gmail.com">f.sonnyijeh@gmail.com</a>
+    <span>© F.Sonny Productions — All rights reserved</span>
+  </footer>
+
+  <div class="view-btn" aria-hidden="true">Press to Play</div>
+
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <defs>
+    <pattern id="dotsC" width="19" height="19" patternUnits="userSpaceOnUse">
+      <circle cx="1.4" cy="1.4" r="1.2" fill="#1e4b38" opacity="0.16"/>
+    </pattern>
+    <linearGradient id="shimC" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e7e0cf"/><stop offset="0.5" stop-color="#f6f1e2"/><stop offset="1" stop-color="#e7e0cf"/>
+    </linearGradient>
+    <filter id="softC" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="9" flood-color="#0d1f17" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="640" height="400" fill="#fbf9f1"/>
+  <rect width="640" height="400" fill="url(#dotsC)"/>
+
+  <path d="M150 150 C 250 150, 250 210, 330 212" fill="none" stroke="#1e4b38" stroke-opacity="0.5" stroke-width="1.6"/>
+  <path d="M150 300 C 250 300, 250 236, 330 232" fill="none" stroke="#1e4b38" stroke-opacity="0.5" stroke-width="1.6" stroke-dasharray="4 5"/>
+  <path d="M500 222 C 545 222, 548 200, 588 198" fill="none" stroke="#1e4b38" stroke-opacity="0.35" stroke-width="1.6" stroke-dasharray="4 5"/>
+
+  <g filter="url(#softC)">
+    <rect x="60" y="96" width="90" height="112" rx="9" fill="#fffefb"/>
+    <text x="70" y="116" font-family="Poppins, sans-serif" font-size="9" font-weight="700" letter-spacing="0.8" fill="#1e4b38" opacity="0.85">STYLE</text>
+    <rect x="70" y="124" width="70" height="74" rx="5" fill="#2b5a44"/>
+    <rect x="78" y="150" width="54" height="7" rx="3.5" fill="#efe7d2" opacity="0.7"/>
+    <rect x="78" y="163" width="40" height="7" rx="3.5" fill="#efe7d2" opacity="0.5"/>
+  </g>
+
+  <g filter="url(#softC)">
+    <rect x="60" y="250" width="150" height="104" rx="9" fill="#fffefb"/>
+    <text x="72" y="272" font-family="Poppins, sans-serif" font-size="9" font-weight="700" letter-spacing="0.8" fill="#1e4b38" opacity="0.85">PROMPT</text>
+    <rect x="72" y="282" width="126" height="60" rx="6" fill="#1e4b38" opacity="0.06"/>
+    <rect x="80" y="292" width="108" height="6" rx="3" fill="#1e4b38" opacity="0.55"/>
+    <rect x="80" y="304" width="96" height="6" rx="3" fill="#1e4b38" opacity="0.4"/>
+    <rect x="80" y="316" width="70" height="6" rx="3" fill="#1e4b38" opacity="0.28"/>
+    <rect x="149" y="315" width="1.6" height="11" fill="#1e4b38"/>
+  </g>
+
+  <g filter="url(#softC)">
+    <rect x="330" y="150" width="170" height="196" rx="10" fill="#fffefb"/>
+    <text x="342" y="170" font-family="Poppins, sans-serif" font-size="9" font-weight="700" letter-spacing="0.8" fill="#1e4b38" opacity="0.85">OUTPUT</text>
+    <rect x="342" y="178" width="146" height="156" rx="6" fill="#24523d"/>
+    <rect x="342" y="178" width="72" height="156" rx="6" fill="url(#shimC)" opacity="0.9"/>
+    <text x="360" y="262" font-family="Poppins, sans-serif" font-size="8" font-weight="600" letter-spacing="1" fill="#1e4b38" opacity="0.55">GENERATING</text>
+  </g>
+
+  <g transform="translate(556 176)">
+    <path d="M0 0 L14 8 L6 9.4 L9 15 L6.4 16.2 L3.4 10.4 L0 13.6 Z" fill="#1e4b38"/>
+    <rect x="12" y="12" width="52" height="17" rx="8.5" fill="#1e4b38"/>
+    <text x="20" y="24" font-family="Poppins, sans-serif" font-size="9" font-weight="600" fill="#f1ebdc">F.Sonny</text>
+  </g>
+
+  <path d="M300 70 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3 z" fill="#1e4b38" opacity="0.5"/>
+</svg>

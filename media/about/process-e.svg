@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <pattern id="dotsE" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="1.4" cy="1.4" r="1.2" fill="#1e4b38" opacity="0.15"/>
+    </pattern>
+    <linearGradient id="shimE" x1="0" y1="0" x2="1" y2="0.3">
+      <stop offset="0" stop-color="#e7e0cf"/><stop offset="0.5" stop-color="#f7f2e3"/><stop offset="1" stop-color="#e7e0cf"/>
+    </linearGradient>
+    <filter id="softE" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="7" stdDeviation="10" flood-color="#0d1f17" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="#fbf9f1"/>
+  <rect width="800" height="450" fill="url(#dotsE)"/>
+
+  <!-- three inputs feeding a prompt, feeding an output -->
+  <path d="M150 120 C 250 120, 270 210, 360 214" fill="none" stroke="#1e4b38" stroke-opacity="0.5" stroke-width="1.6"/>
+  <path d="M150 250 C 250 250, 270 232, 360 234" fill="none" stroke="#1e4b38" stroke-opacity="0.5" stroke-width="1.6"/>
+  <path d="M170 360 C 260 360, 285 260, 360 256" fill="none" stroke="#1e4b38" stroke-opacity="0.4" stroke-width="1.6" stroke-dasharray="4 5"/>
+  <path d="M560 236 C 615 236, 618 210, 665 208" fill="none" stroke="#1e4b38" stroke-opacity="0.35" stroke-width="1.6" stroke-dasharray="4 5"/>
+
+  <!-- input thumbnails -->
+  <g filter="url(#softE)">
+    <rect x="70" y="86" width="80" height="66" rx="8" fill="#fffefb"/>
+    <rect x="78" y="94" width="64" height="50" rx="4" fill="#2b5a44"/>
+  </g>
+  <g filter="url(#softE)">
+    <rect x="70" y="220" width="80" height="66" rx="8" fill="#fffefb"/>
+    <rect x="78" y="228" width="64" height="50" rx="4" fill="#b4552c"/>
+  </g>
+  <g filter="url(#softE)">
+    <rect x="80" y="330" width="80" height="66" rx="8" fill="#fffefb"/>
+    <rect x="88" y="338" width="64" height="50" rx="4" fill="#3c6b52"/>
+  </g>
+
+  <!-- prompt node -->
+  <g filter="url(#softE)">
+    <rect x="360" y="160" width="200" height="150" rx="10" fill="#fffefb"/>
+    <circle cx="378" cy="182" r="4" fill="#1e4b38" opacity="0.4"/>
+    <text x="392" y="186" font-family="Poppins, sans-serif" font-size="10" font-weight="700" letter-spacing="0.8" fill="#1e4b38" opacity="0.85">PROMPT</text>
+    <rect x="376" y="200" width="168" height="76" rx="7" fill="#1e4b38" opacity="0.06"/>
+    <rect x="386" y="212" width="148" height="7" rx="3.5" fill="#1e4b38" opacity="0.55"/>
+    <rect x="386" y="226" width="128" height="7" rx="3.5" fill="#1e4b38" opacity="0.42"/>
+    <rect x="386" y="240" width="140" height="7" rx="3.5" fill="#1e4b38" opacity="0.3"/>
+    <rect x="386" y="254" width="86" height="7" rx="3.5" fill="#1e4b38" opacity="0.22"/>
+    <rect x="471" y="253" width="1.8" height="12" fill="#1e4b38"/>
+    <!-- ref chips -->
+    <rect x="386" y="284" width="22" height="22" rx="5" fill="#2b5a44"/>
+    <rect x="414" y="284" width="22" height="22" rx="5" fill="#b4552c"/>
+    <rect x="442" y="284" width="22" height="22" rx="5" fill="#3c6b52"/>
+  </g>
+
+  <!-- output -->
+  <g filter="url(#softE)">
+    <rect x="620" y="120" width="120" height="214" rx="10" fill="#fffefb"/>
+    <text x="632" y="140" font-family="Poppins, sans-serif" font-size="9" font-weight="700" letter-spacing="0.8" fill="#1e4b38" opacity="0.85">OUTPUT</text>
+    <rect x="632" y="148" width="96" height="176" rx="6" fill="#24523d"/>
+    <rect x="632" y="148" width="96" height="70" rx="6" fill="url(#shimE)" opacity="0.85"/>
+  </g>
+
+  <!-- cursor -->
+  <g transform="translate(300 120)">
+    <path d="M0 0 L14 8 L6 9.4 L9 15 L6.4 16.2 L3.4 10.4 L0 13.6 Z" fill="#b4552c"/>
+    <rect x="12" y="12" width="46" height="17" rx="8.5" fill="#b4552c"/>
+    <text x="20" y="24" font-family="Poppins, sans-serif" font-size="9" font-weight="600" fill="#f1ebdc">Client</text>
+  </g>
+
+  <path d="M700 372 l3.4 9 l9 3.4 l-9 3.4 l-3.4 9 l-3.4 -9 l-9 -3.4 l9 -3.4 z" fill="#1e4b38" opacity="0.45"/>
+</svg>

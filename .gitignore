@@ -1,0 +1,16 @@
+# Raw source footage & originals (not used by the live site — kept locally only)
+Videos/
+ex.mov
+*.MOV
+*.mov
+IMG_*.JPG
+IMG_*.jpg
+1666949936646.jpeg
+
+# Editor / OS / tooling
+.claude/
+.DS_Store
+*.log
+
+# Note: the optimized site assets in media/ ARE committed (that's what the site serves)
+!media/
