@@ -345,11 +345,13 @@
     });
   });
 
-  /* ---------- Connect page: request form -> mailto ---------- */
+  /* ---------- Connect page: request form -> Formspree (AJAX) ---------- */
   var reqform = document.querySelector(".reqform");
   if (reqform) {
     reqform.addEventListener("submit", function (e) {
       e.preventDefault();
+
+      // validate required fields
       var required = ["rf-name", "rf-email", "rf-about"];
       var valid = true;
       required.forEach(function (id) {
@@ -363,25 +365,37 @@
       }
       if (!valid) return;
 
-      var g = function (id) { return (document.getElementById(id).value || "").trim(); };
-      var name = g("rf-name");
-      var body =
-        "Name: " + name + "\n" +
-        "Email: " + g("rf-email") + "\n" +
-        "Industry: " + g("rf-industry") + "\n" +
-        "Plan of interest: " + g("rf-plan") + "\n" +
-        "About: " + g("rf-about") + "\n\n" +
-        "Notes:\n" + (g("rf-notes") || "—") + "\n";
-      var mailto =
-        "mailto:f.sonnyijeh@gmail.com" +
-        "?subject=" + encodeURIComponent("New project request — " + name) +
-        "&body=" + encodeURIComponent(body);
-
       var btn = reqform.querySelector(".reqform__submit");
-      btn.textContent = "Opening email…";
-      btn.classList.add("is-sent");
-      window.location.href = mailto;
-      setTimeout(function () { btn.textContent = "Send request"; btn.classList.remove("is-sent"); }, 4000);
+      var note = reqform.querySelector(".reqform__note");
+      btn.disabled = true;
+      btn.textContent = "Sending…";
+
+      fetch(reqform.action, {
+        method: "POST",
+        body: new FormData(reqform),
+        headers: { "Accept": "application/json" }
+      }).then(function (res) {
+        if (res.ok) {
+          var done = document.querySelector(".reqform__done");
+          reqform.hidden = true;
+          if (done) done.hidden = false;
+        } else {
+          res.json().then(function (data) {
+            var msg = (data && data.errors && data.errors.length)
+              ? data.errors.map(function (x) { return x.message; }).join(", ")
+              : "Something went wrong — please email f.sonnyijeh@gmail.com directly.";
+            if (note) { note.textContent = msg; note.classList.add("is-error"); }
+          }).catch(function () {
+            if (note) { note.textContent = "Something went wrong — please email f.sonnyijeh@gmail.com directly."; note.classList.add("is-error"); }
+          });
+          btn.disabled = false;
+          btn.textContent = "Send request";
+        }
+      }).catch(function () {
+        if (note) { note.textContent = "Network error — please email f.sonnyijeh@gmail.com directly."; note.classList.add("is-error"); }
+        btn.disabled = false;
+        btn.textContent = "Send request";
+      });
     });
   }
 })();

@@ -154,7 +154,8 @@
         <h2 class="request__heading">Send a request</h2>
         <p class="request__sub">Tell me a little about your brand and I'll come back with a tailored proposal.</p>
 
-        <form class="reqform" novalidate>
+        <form class="reqform" action="https://formspree.io/f/xzdlwezp" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="New project request — F.Sonny Productions" />
           <div class="reqform__field">
             <label for="rf-name">Your name <span>*</span></label>
             <input type="text" id="rf-name" name="name" autocomplete="name" required />
@@ -193,10 +194,14 @@
             <textarea id="rf-notes" name="notes" rows="4" placeholder="Share anything that helps me prepare — goals, channels, timeline, references."></textarea>
           </div>
           <div class="reqform__foot">
-            <p class="reqform__note">Opens your email client with the request pre-filled.</p>
+            <p class="reqform__note">Sent straight to my inbox — I usually reply within a day.</p>
             <button type="submit" class="reqform__submit">Send request</button>
           </div>
         </form>
+        <div class="reqform__done" hidden>
+          <h3>Thanks — your request is in.</h3>
+          <p>I've got your details and I'll get back to you by email shortly.</p>
+        </div>
       </div>
     </section>
 

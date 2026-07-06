@@ -1437,6 +1437,18 @@ ul { list-style: none; }
 }
 .reqform__submit:hover { background: #cfe0a8; transform: translateY(-2px); }
 .reqform__submit.is-sent { background: #cfe0a8; }
+.reqform__submit:disabled { opacity: 0.7; cursor: default; transform: none; }
+.reqform__note.is-error { opacity: 1; color: #e7b39a; }
+
+/* success state after a request is sent */
+.reqform__done { padding: 20px 2px; }
+.reqform__done h3 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(22px, 2.6vw, 30px);
+  margin-bottom: 10px;
+}
+.reqform__done p { font-size: 16px; opacity: 0.85; }
 
 /* offer page footer socials */
 .pfooter__socials { display: flex; gap: 12px; }
