@@ -119,6 +119,20 @@
   sizeShowcase();
   window.addEventListener("resize", sizeShowcase);
 
+  /* Re-align #hash landings (e.g. index.html#about from another page):
+     the browser jumps to the anchor before sizeShowcase() grows the
+     showcase by ~3000px, so every section below has moved and the
+     visitor is left stranded in an empty stretch of the page. */
+  function realignHash() {
+    if (!location.hash) return;
+    var target;
+    try { target = document.querySelector(location.hash); } catch (err) { return; }
+    if (!target) return;
+    window.scrollTo(0, target.getBoundingClientRect().top + window.scrollY);
+  }
+  realignHash();
+  window.addEventListener("load", realignHash);
+
   function updateShowcase() {
     if (!showcase || !track) return;
     var rect = showcase.getBoundingClientRect();
